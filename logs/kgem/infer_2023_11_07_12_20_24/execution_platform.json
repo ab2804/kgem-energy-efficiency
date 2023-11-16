@@ -1,0 +1,16 @@
+{
+    "System": "Windows",
+    "Node Name": "LAPTOP-F2F1DURD",
+    "Release": "10",
+    "Version": "10.0.22621",
+    "Machine": "AMD64",
+    "Processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "Physical cores": 4,
+    "Total cores": 8,
+    "Max Frequency": 2419.0,
+    "Min Frequency": 0.0,
+    "Current Frequency": 2419.0,
+    "Total": 8362713088,
+    "Available": 477274112,
+    "Used": 7885438976
+}

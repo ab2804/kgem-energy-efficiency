@@ -1,0 +1,3 @@
+import pykeen
+
+pykeen.env()

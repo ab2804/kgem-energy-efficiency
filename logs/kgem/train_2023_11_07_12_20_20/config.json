@@ -1,0 +1,10 @@
+{
+    "dataset": "countries",
+    "model": "TransE",
+    "output_dir": "logs/kgem",
+    "ds_seed": -1,
+    "epochs": 100,
+    "cpu_monitor_interval": 0.5,
+    "seed": 42,
+    "timestamp": "2023_11_07_12_20_20"
+}
