@@ -30,6 +30,11 @@ def main(args):
 
         emissions_tracker = OfflineEmissionsTracker(measure_power_secs=args.cpu_monitor_interval, log_level='warning',
                                                     country_iso_code="DEU", save_to_file=True, output_dir=output_dir)
+
+        # tracking_mode = machine (default) or process
+        # CPU: uses RAPL files (only for intel CPUs with root access)
+        # pynvml library (only for Nvidia GPUs) measures consumption of the whole machine and not only the process
+
         emissions_tracker.start()
         start_time = time.time()
 
@@ -67,7 +72,6 @@ def main(args):
 
         emissions_tracker = OfflineEmissionsTracker(measure_power_secs=args.cpu_monitor_interval, log_level='warning',
                                                     country_iso_code="DEU", save_to_file=True, output_dir=output_dir)
-        emissions_tracker.start()
 
         # PyKEEN Inference
 
@@ -77,6 +81,9 @@ def main(args):
         random_index = random.randint(0, len(training_triples))
         test_triple = training_triples[random_index]
 
+        emissions_tracker.start()
+
+        # Tail Prediction
         df = predict.predict_target(
             model=result.model,
             head=int(test_triple[0]),
