@@ -6,6 +6,7 @@ import os
 import time
 import random
 from datetime import datetime
+from pathlib import Path
 
 from codecarbon import OfflineEmissionsTracker
 
@@ -41,7 +42,7 @@ def main(args):
 
         # save checkpoints to load model for inference
         timestamp = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
-        checkpoint = f'checkpoint_{timestamp}.pt'
+        checkpoint = f'{args.model}_{args.dataset}_checkpoint_{timestamp}.pt'
 
         emissions_tracker = OfflineEmissionsTracker(measure_power_secs=args.cpu_monitor_interval, log_level='warning',
                                                     country_iso_code="DEU", save_to_file=True, output_dir=output_dir)
@@ -56,6 +57,7 @@ def main(args):
             triples_factory=dataset.training,
             num_epochs=args.epochs,
             checkpoint_name=checkpoint,
+            checkpoint_directory=r'\Users\borow\kgem\checkpoints',
             checkpoint_frequency=30,
         )
         # returns the losses per epoch (not the trained model)
@@ -97,7 +99,8 @@ def main(args):
         # PyKEEN Inference
 
         # load trained model from checkpoint
-        checkpoint = torch.load(PYKEEN_CHECKPOINTS.joinpath(checkpoint))
+        cpath = Path(r'\Users\borow\kgem\checkpoints')
+        checkpoint = torch.load(cpath.joinpath(checkpoint))
         model.load_state_dict(checkpoint['model_state_dict'])
 
         # choose a triple randomly to test inference
@@ -167,7 +170,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', default='countries')
     parser.add_argument('--model', default='TransE')
-    parser.add_argument('--output-dir', default='logs/kgem')
+    parser.add_argument('--output-dir', default=r'\Users\borow\kgem\ergebnisse')
     parser.add_argument('--epochs', type=int, default=100)
 
     # randomization and hardware profiling
