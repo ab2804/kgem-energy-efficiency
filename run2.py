@@ -78,6 +78,11 @@ def main(args):
         setattr(args, 'train_logdir', output_dir)
 
         ############## Evaluation #############
+        output_dir = create_output_dir(args.output_dir, 'evaluate', args.__dict__)
+        emissions_tracker = OfflineEmissionsTracker(measure_power_secs=args.cpu_monitor_interval, log_level='warning',
+                                                    country_iso_code="DEU", save_to_file=True, output_dir=output_dir)
+        emissions_tracker.start()
+        start_time = time.time()
 
         evaluator = RankBasedEvaluator()
         evaluation_loop = LCWAEvaluationLoop(
@@ -86,15 +91,25 @@ def main(args):
         )
         result = evaluation_loop.evaluate()
 
+        end_time = time.time()
+        emissions_tracker.stop()
+
+        results = {
+            'start': start_time,
+            'end': end_time
+        }
+
+        with open(os.path.join(output_dir, f'results.json'), 'w') as rf:
+            json.dump(results, rf, indent=4, cls=PatchedJSONEncoder)
+
         ############## INFERENCE ##############
         split = 'validation'
         output_dir = create_output_dir(args.output_dir, 'infer', args.__dict__)
 
-        start_time = time.time()
-
         emissions_tracker = OfflineEmissionsTracker(measure_power_secs=args.cpu_monitor_interval, log_level='warning',
                                                     country_iso_code="DEU", save_to_file=True, output_dir=output_dir)
         emissions_tracker.start()
+        start_time = time.time()
 
         # PyKEEN Inference
 
@@ -119,9 +134,8 @@ def main(args):
 
         df.sort_values(by=['score'])
 
-        emissions_tracker.stop()
-
         end_time = time.time()
+        emissions_tracker.stop()
 
         model_stats = {
             'params': model.num_parameters,
