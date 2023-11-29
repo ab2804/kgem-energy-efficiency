@@ -115,21 +115,20 @@ def main(args):
 
         # load trained model from checkpoint
         cpath = Path(r'\Users\borow\kgem\checkpoints')
-        checkpoint = torch.load(cpath.joinpath(checkpoint))
-        model.load_state_dict(checkpoint['model_state_dict'])
+        cp = torch.load(cpath.joinpath(checkpoint))
+        model.load_state_dict(cp['model_state_dict'])
 
-        # choose a triple randomly to test inference
+        # choose a triple randomly for inference
         random.seed(args.seed)
-        training_triples = dataset.training.mapped_triples
-        random_index = random.randint(0, len(training_triples))
-        test_triple = training_triples[random_index]
+        testing_triples = dataset.testing.mapped_triples
+        random_index = random.randint(0, len(testing_triples))
+        test_triple = testing_triples[random_index]
 
         # tail prediction
         df = predict.predict_target(
             model=model,
             head=int(test_triple[0]),
-            relation=int(test_triple[1]),
-            triples_factory=model.training
+            relation=int(test_triple[1])
         ).df
 
         df.sort_values(by=['score'])
