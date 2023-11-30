@@ -5,12 +5,12 @@ import json
 import os
 import time
 import random
+import logging
 
 from codecarbon import OfflineEmissionsTracker
 
 from mlprops.util import create_output_dir, PatchedJSONEncoder
 
-from pykeen.pipeline import pipeline
 from pykeen import predict
 from pykeen.datasets import get_dataset
 from pykeen.stoppers import stopper_resolver, Stopper
@@ -19,7 +19,6 @@ from pykeen.pipeline.api import _handle_random_seed, _handle_dataset, _handle_mo
     _handle_evaluator, _handle_evaluation
 from pykeen.utils import set_random_seed
 from pykeen.pipeline import PipelineResult
-import logging
 
 
 def main(args):
@@ -40,6 +39,7 @@ def main(args):
 
         ### Taken from pykeen.pipeline.api
 
+        # pipeline configuration
         # 1. Dataset
         dataset = dataset
         dataset_kwargs = dict(
@@ -78,7 +78,8 @@ def main(args):
         epochs = None
         training_kwargs = dict(
             num_epochs=args.epochs,
-            use_tqdm_batch=False
+            use_tqdm_batch=False,
+            checkpoint_directory=r'\Users\borow\kgem\checkpoints'
         )
         stopper = 'early'
         stopper_kwargs = None
@@ -274,6 +275,9 @@ def main(args):
         ### End of the Code from pykeen.pipeline.api
 
         results = {
+            'history': {
+                'loss': result.losses
+            },
             'start': start_time,
             'end': end_time,
             'model': None
@@ -289,34 +293,29 @@ def main(args):
         split = 'validation'
         output_dir = create_output_dir(args.output_dir, 'infer', args.__dict__)
 
-        start_time = time.time()
-
         emissions_tracker = OfflineEmissionsTracker(measure_power_secs=args.cpu_monitor_interval, log_level='warning',
                                                     country_iso_code="DEU", save_to_file=True, output_dir=output_dir)
 
-        # PyKEEN Inference
-
-        # choose a triple randomly to test inference
+        # choose a triple randomly for inference
         random.seed(args.seed)
-        training_triples = dataset.training.mapped_triples
-        random_index = random.randint(0, len(training_triples))
-        test_triple = training_triples[random_index]
+        testing_triples = dataset.testing.mapped_triples
+        random_index = random.randint(0, len(testing_triples))
+        test_triple = testing_triples[random_index]
 
         emissions_tracker.start()
+        start_time = time.time()
 
-        # Tail Prediction
+        # tail prediction
         df = predict.predict_target(
             model=result.model,
             head=int(test_triple[0]),
-            relation=int(test_triple[1]),
-            triples_factory=result.training
+            relation=int(test_triple[1])
         ).df
 
         df.sort_values(by=['score'])
 
-        emissions_tracker.stop()
-
         end_time = time.time()
+        emissions_tracker.stop()
 
         model_stats = {
             'params': result.model.num_parameters,
@@ -365,7 +364,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', default='kinships')
     parser.add_argument('--model', default='TransE')
-    parser.add_argument('--output-dir', default='logs/kgem')
+    parser.add_argument('--output-dir', default=r'\Users\borow\kgem\ergebnisse')
     parser.add_argument('--epochs', type=int, default=100)
 
     # randomization and hardware profiling
