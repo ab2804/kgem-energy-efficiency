@@ -1,0 +1,163 @@
+{
+    "directory_name": "train_2023_12_02_00_39_07",
+    "config": {
+        "dataset": "FB15k-237",
+        "model": "NTN",
+        "output_dir": "/data/d1/kgem/results",
+        "epochs": 1000,
+        "cpu_monitor_interval": 0.5,
+        "seed": 135,
+        "timestamp": "2023_12_02_00_39_07"
+    },
+    "emissions": {
+        "timestamp": {
+            "0": "2023-12-02T00:40:40"
+        },
+        "project_name": {
+            "0": "codecarbon"
+        },
+        "run_id": {
+            "0": "46f506e9-a008-4acf-a017-46657959786c"
+        },
+        "duration": {
+            "0": 90.99618291854858
+        },
+        "emissions": {
+            "0": 0.0024357690238426
+        },
+        "emissions_rate": {
+            "0": 2.676781537114487e-05
+        },
+        "cpu_power": {
+            "0": 8.7902887273922
+        },
+        "gpu_power": {
+            "0": 103.19391695157206
+        },
+        "ram_power": {
+            "0": 23.42510032653809
+        },
+        "cpu_energy": {
+            "0": 0.0010043495982012
+        },
+        "gpu_energy": {
+            "0": 0.005070417389664
+        },
+        "ram_energy": {
+            "0": 0.0005898631361715
+        },
+        "energy_consumed": {
+            "0": 0.0066646301240369
+        },
+        "country_name": {
+            "0": "Germany"
+        },
+        "country_iso_code": {
+            "0": "DEU"
+        },
+        "region": {
+            "0": NaN
+        },
+        "cloud_provider": {
+            "0": NaN
+        },
+        "cloud_region": {
+            "0": NaN
+        },
+        "os": {
+            "0": "Linux-5.15.0-88-generic-x86_64-with-glibc2.35"
+        },
+        "python_version": {
+            "0": "3.10.12"
+        },
+        "codecarbon_version": {
+            "0": "2.3.1"
+        },
+        "cpu_count": {
+            "0": 32
+        },
+        "cpu_model": {
+            "0": "13th Gen Intel(R) Core(TM) i9-13900K"
+        },
+        "gpu_count": {
+            "0": 1
+        },
+        "gpu_model": {
+            "0": "1 x NVIDIA GeForce RTX 4090"
+        },
+        "longitude": {
+            "0": NaN
+        },
+        "latitude": {
+            "0": NaN
+        },
+        "ram_total_size": {
+            "0": 62.46693420410156
+        },
+        "tracking_mode": {
+            "0": "machine"
+        },
+        "on_cloud": {
+            "0": "N"
+        },
+        "pue": {
+            "0": 1.0
+        }
+    },
+    "execution_platform": {
+        "System": "Linux",
+        "Node Name": "lamws027",
+        "Release": "5.15.0-88-generic",
+        "Version": "#98-Ubuntu SMP Mon Oct 2 15:18:56 UTC 2023",
+        "Machine": "x86_64",
+        "Processor": "13th Gen Intel(R) Core(TM) i9-13900K",
+        "Physical cores": 24,
+        "Total cores": 32,
+        "Max Frequency": 4937.5,
+        "Min Frequency": 800.0,
+        "Current Frequency": 2973.14471875,
+        "Total": 67073359872,
+        "Available": 62717775872,
+        "Used": 3591622656
+    },
+    "results": {
+        "history": {
+            "loss": [
+                1.5508876824760258,
+                1.2328139190839802,
+                1.0948386505764829,
+                1.0332596653604553,
+                1.002974299754271,
+                0.9845204339314494,
+                0.9711378968109641,
+                0.9598782037858793,
+                0.9514239515096425,
+                0.9453274335147969,
+                0.9385598189743307,
+                0.9318471413564816,
+                0.9258046847744472,
+                0.9206161136236936,
+                0.9143865202691123,
+                0.9103228093202901,
+                0.9065851993641535,
+                0.9028317280120706,
+                0.8970491605217683,
+                0.892461442263308,
+                0.8898994989924462,
+                0.8859781194495796,
+                0.8821133867480905,
+                0.8772233103875944,
+                0.8751889680313368,
+                0.8699912862853968,
+                0.868490081627416,
+                0.8634480485799507,
+                0.8610380092322097,
+                0.8569968628748789
+            ]
+        },
+        "start": 1701477549.4898028,
+        "end": 1701477640.4825718,
+        "model": null
+    },
+    "full_log": "results_kgem\\train_2023_12_02_00_39_07.tar.gz"
+}

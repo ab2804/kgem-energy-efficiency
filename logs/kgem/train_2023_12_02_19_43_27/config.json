@@ -1,0 +1,9 @@
+{
+    "dataset": "WN18-RR",
+    "model": "DistMult",
+    "output_dir": "/data/d1/kgem/results",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 135,
+    "timestamp": "2023_12_02_19_43_27"
+}

@@ -1,0 +1,9 @@
+{
+    "dataset": "FB15k-237",
+    "model": "UM",
+    "output_dir": "/data/d1/kgem/results",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 124,
+    "timestamp": "2023_12_04_08_30_17"
+}

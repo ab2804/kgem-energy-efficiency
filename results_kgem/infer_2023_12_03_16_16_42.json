@@ -1,0 +1,140 @@
+{
+    "directory_name": "infer_2023_12_03_16_16_42",
+    "config": {
+        "dataset": "kinships",
+        "model": "TransR",
+        "output_dir": "/data/d1/kgem/results",
+        "epochs": 1000,
+        "cpu_monitor_interval": 0.5,
+        "seed": 124,
+        "timestamp": "2023_12_03_16_16_42",
+        "train_logdir": "/data/d1/kgem/results/train_2023_12_03_16_16_32"
+    },
+    "emissions": {
+        "timestamp": {
+            "0": "2023-12-03T16:16:43"
+        },
+        "project_name": {
+            "0": "codecarbon"
+        },
+        "run_id": {
+            "0": "42af3628-4b1f-48df-8602-703b31f1290a"
+        },
+        "duration": {
+            "0": 0.0070736408233642
+        },
+        "emissions": {
+            "0": 2.8080054045218137e-08
+        },
+        "emissions_rate": {
+            "0": 3.96967484586857e-06
+        },
+        "cpu_power": {
+            "0": 32.10715770661657
+        },
+        "gpu_power": {
+            "0": 0.0
+        },
+        "ram_power": {
+            "0": 23.42510032653809
+        },
+        "cpu_energy": {
+            "0": 6.223893868079894e-08
+        },
+        "gpu_energy": {
+            "0": 0.0
+        },
+        "ram_energy": {
+            "0": 1.459230937371103e-08
+        },
+        "energy_consumed": {
+            "0": 7.683124805450998e-08
+        },
+        "country_name": {
+            "0": "Germany"
+        },
+        "country_iso_code": {
+            "0": "DEU"
+        },
+        "region": {
+            "0": NaN
+        },
+        "cloud_provider": {
+            "0": NaN
+        },
+        "cloud_region": {
+            "0": NaN
+        },
+        "os": {
+            "0": "Linux-5.15.0-88-generic-x86_64-with-glibc2.35"
+        },
+        "python_version": {
+            "0": "3.10.12"
+        },
+        "codecarbon_version": {
+            "0": "2.3.1"
+        },
+        "cpu_count": {
+            "0": 32
+        },
+        "cpu_model": {
+            "0": "13th Gen Intel(R) Core(TM) i9-13900K"
+        },
+        "gpu_count": {
+            "0": 1
+        },
+        "gpu_model": {
+            "0": "1 x NVIDIA GeForce RTX 4090"
+        },
+        "longitude": {
+            "0": NaN
+        },
+        "latitude": {
+            "0": NaN
+        },
+        "ram_total_size": {
+            "0": 62.46693420410156
+        },
+        "tracking_mode": {
+            "0": "machine"
+        },
+        "on_cloud": {
+            "0": "N"
+        },
+        "pue": {
+            "0": 1.0
+        }
+    },
+    "execution_platform": {
+        "System": "Linux",
+        "Node Name": "lamws027",
+        "Release": "5.15.0-88-generic",
+        "Version": "#98-Ubuntu SMP Mon Oct 2 15:18:56 UTC 2023",
+        "Machine": "x86_64",
+        "Processor": "13th Gen Intel(R) Core(TM) i9-13900K",
+        "Physical cores": 24,
+        "Total cores": 32,
+        "Max Frequency": 4937.5,
+        "Min Frequency": 800.0,
+        "Current Frequency": 2944.7532499999998,
+        "Total": 67073359872,
+        "Available": 61699346432,
+        "Used": 4591083520
+    },
+    "validation_results": {
+        "metrics": {
+            "Hits@1": 0.2574487895716946,
+            "Hits@3": 0.4473929236499069,
+            "Hits@5": 0.5535381750465549,
+            "Hits@10": 0.7267225325884544,
+            "Mean Reciprocal Rank": 0.40060845017433167
+        },
+        "start": 1701620203.3753824,
+        "end": 1701620203.3769612,
+        "model": {
+            "params": 43450,
+            "fsize": 173800
+        }
+    },
+    "full_log": "results_kgem\\infer_2023_12_03_16_16_42.tar.gz"
+}

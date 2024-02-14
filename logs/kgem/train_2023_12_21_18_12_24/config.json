@@ -1,0 +1,9 @@
+{
+    "dataset": "WN18-RR",
+    "model": "TransE",
+    "output_dir": "/data/d1/kgem/results3",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 124,
+    "timestamp": "2023_12_21_18_12_24"
+}

@@ -1,0 +1,10 @@
+{
+    "dataset": "kinships",
+    "model": "HolE",
+    "output_dir": "/data/d1/kgem/results",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 42,
+    "timestamp": "2023_11_30_17_38_19",
+    "train_logdir": "/data/d1/kgem/results/train_2023_11_30_17_38_09"
+}

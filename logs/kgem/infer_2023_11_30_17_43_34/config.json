@@ -1,0 +1,10 @@
+{
+    "dataset": "kinships",
+    "model": "RotatE",
+    "output_dir": "/data/d1/kgem/results",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 135,
+    "timestamp": "2023_11_30_17_43_34",
+    "train_logdir": "/data/d1/kgem/results/train_2023_11_30_17_43_26"
+}

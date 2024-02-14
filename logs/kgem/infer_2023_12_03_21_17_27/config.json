@@ -1,0 +1,10 @@
+{
+    "dataset": "WN18-RR",
+    "model": "UM",
+    "output_dir": "/data/d1/kgem/results",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 129,
+    "timestamp": "2023_12_03_21_17_27",
+    "train_logdir": "/data/d1/kgem/results/train_2023_12_03_21_16_05"
+}

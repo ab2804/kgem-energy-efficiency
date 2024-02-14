@@ -1,0 +1,9 @@
+{
+    "dataset": "kinships",
+    "model": "TransD",
+    "output_dir": "/data/d1/kgem/results",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 135,
+    "timestamp": "2023_11_30_17_46_01"
+}

@@ -1,0 +1,122 @@
+{
+  "ComplEx": {
+    "name": "ComplEx",
+    "implementation": "PyKEEN",
+    "paper": "Trouillon et al. 2016",
+    "url": "https://arxiv.org/abs/1606.06357"
+  },
+  "ConvE": {
+    "name": "ConvE",
+    "implementation": "PyKEEN",
+    "paper": "Dettmers et al. 2018",
+    "url": "http://arxiv.org/abs/1707.01476"
+  },
+  "DistMult": {
+    "name": "DistMult",
+    "implementation": "PyKEEN",
+    "paper": "Yang et al. 2015",
+    "url": "http://arxiv.org/abs/1412.6575"
+  },
+  "ERMLP": {
+    "name": "ERMLP",
+    "implementation": "PyKEEN",
+    "paper": "Dong et al. 2014",
+    "url": "https://dl.acm.org/doi/10.1145/2623330.2623623"
+  },
+  "HolE": {
+    "name": "HolE",
+    "implementation": "PyKEEN",
+    "paper": "Nickel et al. 2015",
+    "url": "http://arxiv.org/abs/1510.04935"
+  },
+  "KG2E": {
+    "name": "KG2E",
+    "implementation": "PyKEEN",
+    "paper": "He et al. 2015",
+    "url": "https://dl.acm.org/doi/10.1145/2806416.2806502"
+  },
+  "MuRE": {
+    "name": "MuRE",
+    "implementation": "PyKEEN",
+    "paper": "Balazevic et al. 2019",
+    "url": "https://arxiv.org/abs/1905.09791"
+  },
+  "NTN": {
+    "name": "NTN",
+    "implementation": "PyKEEN",
+    "paper": "Socher et al. 2013",
+    "url": "https://papers.nips.cc/paper_files/paper/2013/hash/b337e84de8752b27eda3a12363109e80-Abstract.html"
+  },
+  "ProjE": {
+    "name": "ProjE",
+    "implementation": "PyKEEN",
+    "paper": "Shi et al. 2016",
+    "url": "http://arxiv.org/abs/1611.05425"
+  },
+  "QuatE": {
+    "name": "QuatE",
+    "implementation": "PyKEEN",
+    "paper": "Zhang et al. 2019",
+    "url": "http://arxiv.org/abs/1904.10281"
+  },
+  "RESCAL": {
+    "name": "RESCAL",
+    "implementation": "PyKEEN",
+    "paper": "Nickel et al. 2011",
+    "url": "http://www.icml-2011.org/papers/438_icmlpaper.pdf"
+  },
+  "RotatE": {
+    "name": "RotatE",
+    "implementation": "PyKEEN",
+    "paper": "Sun et al. 2019",
+    "url": "http://arxiv.org/abs/1902.10197"
+  },
+  "SE": {
+    "name": "SE",
+    "implementation": "PyKEEN",
+    "paper": "Bordes et al. 2011",
+    "url": "https://doi.org/10.1609/aaai.v25i1.7917"
+  },
+  "SimplE": {
+    "name": "SimplE",
+    "implementation": "PyKEEN",
+    "paper": "Kazemi et al. 2018",
+    "url": "http://arxiv.org/abs/1802.04868"
+  },
+  "TransD": {
+    "name": "TransD",
+    "implementation": "PyKEEN",
+    "paper": "Ji et al. 2015",
+    "url": "https://aclanthology.org/P15-1067"
+  },
+  "TransE": {
+    "name": "TransE",
+    "implementation": "PyKEEN",
+    "paper": "Bordes et al. 2013",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2013/file/1cecc7a77928ca8133fa24680a88d2f9-Paper.pdf"
+  },
+  "TransH": {
+    "name": "TransH",
+    "implementation": "PyKEEN",
+    "paper": "Wang et al. 2014",
+    "url": "https://doi.org/10.1609/aaai.v28i1.8870"
+  },
+  "TransR": {
+    "name": "TransR",
+    "implementation": "PyKEEN",
+    "paper": "Lin et al. 2015",
+    "url": "https://doi.org/10.1609/aaai.v29i1.9491"
+  },
+  "TuckER": {
+    "name": "TuckER",
+    "implementation": "PyKEEN",
+    "paper": "Balazevic et al. 2019",
+    "url": "https://doi.org/10.1609/aaai.v29i1.9491"
+  },
+  "UM": {
+    "name": "UM",
+    "implementation": "PyKEEN",
+    "paper": "Glorot et al. 2013",
+    "url": "http://arxiv.org/abs/1301.3485"
+  }
+}

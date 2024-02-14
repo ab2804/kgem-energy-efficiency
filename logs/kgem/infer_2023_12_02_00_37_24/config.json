@@ -1,0 +1,10 @@
+{
+    "dataset": "FB15k-237",
+    "model": "MuRE",
+    "output_dir": "/data/d1/kgem/results",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 468,
+    "timestamp": "2023_12_02_00_37_24",
+    "train_logdir": "/data/d1/kgem/results/train_2023_12_02_00_33_43"
+}

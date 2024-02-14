@@ -1,0 +1,10 @@
+{
+    "dataset": "FB15k-237",
+    "model": "TuckER",
+    "output_dir": "/data/d1/kgem/results",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 124,
+    "timestamp": "2023_12_04_08_29_26",
+    "train_logdir": "/data/d1/kgem/results/train_2023_12_04_08_26_30"
+}

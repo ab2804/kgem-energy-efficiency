@@ -1,0 +1,73 @@
+{
+    "Hits@5":{
+        "name":"Hits@5",
+        "shortname":"Hits@5",
+        "unit":"number",
+        "group":"Performance",
+        "weight":0.111111111,
+        "maximize":true,
+        "independent_of_task":true
+    },
+    "Hits@10":{
+        "name":"Hits@10",
+        "shortname":"Hits@10",
+        "unit":"number",
+        "group":"Performance",
+        "weight":0.111111111,
+        "maximize":true,
+        "independent_of_task":true
+    },
+    "Mean Reciprocal Rank": {
+        "name": "Mean Reciprocal Rank",
+        "shortname": "MRR",
+        "unit": "number",
+        "group": "Performance",
+        "weight": 0.111111111,
+        "maximize": true,
+        "independent_of_task": true
+    },
+    "parameters": {
+        "name": "Number of Parameters",
+        "shortname": "Params",
+        "unit": "number",
+        "group": "Complexity",
+        "weight": 0.166666667,
+        "independent_of_task": true
+    },
+    "fsize": {
+        "name": "Model Size on Disc",
+        "shortname": "Size",
+        "unit": "byte",
+        "group": "Complexity",
+        "weight": 0.166666667,
+        "independent_of_task": true
+    },
+    "train_power_draw": {
+        "name": "Training Power Draw",
+        "shortname": "T Power",
+        "unit": "wattseconds",
+        "group": "Resources",
+        "weight": 0.1666666666
+    },
+    "train_running_time": {
+        "name": "Training Time",
+        "shortname": "T Time",
+        "unit": "seconds",
+        "group": "Resources",
+        "weight": 0.1666666666
+    },
+    "power_draw": {
+        "name": "Power Draw per Inference",
+        "shortname": "I Power",
+        "unit": "wattseconds",
+        "group": "Resources",
+        "weight": 0.1666666666
+    },
+    "running_time": {
+        "name": "Running Time per Inference",
+        "shortname": "I Time",
+        "unit": "seconds",
+        "group": "Resources",
+        "weight": 0.1666666666
+    }
+}

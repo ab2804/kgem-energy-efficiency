@@ -1,0 +1,10 @@
+{
+    "dataset": "kinships",
+    "model": "TransR",
+    "output_dir": "/data/d1/kgem/results",
+    "epochs": 1000,
+    "cpu_monitor_interval": 0.5,
+    "seed": 129,
+    "timestamp": "2023_12_03_16_16_29",
+    "train_logdir": "/data/d1/kgem/results/train_2023_12_03_16_16_14"
+}

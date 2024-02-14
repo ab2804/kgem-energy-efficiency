@@ -1,0 +1,16 @@
+{
+    "System": "Linux",
+    "Node Name": "lamws027",
+    "Release": "5.15.0-88-generic",
+    "Version": "#98-Ubuntu SMP Mon Oct 2 15:18:56 UTC 2023",
+    "Machine": "x86_64",
+    "Processor": "13th Gen Intel(R) Core(TM) i9-13900K",
+    "Physical cores": 24,
+    "Total cores": 32,
+    "Max Frequency": 4937.5,
+    "Min Frequency": 800.0,
+    "Current Frequency": 2944.7841875,
+    "Total": 67073359872,
+    "Available": 61432721408,
+    "Used": 4857720832
+}
