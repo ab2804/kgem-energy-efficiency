@@ -81,10 +81,8 @@ def main(args):
         epochs = None
         training_kwargs = dict(
             num_epochs=args.epochs,
-            use_tqdm_batch=False,
-            checkpoint_directory=r'\Users\borow\kgem\checkpoints'
+            use_tqdm_batch=False
         )
-        # checkpoint_directory=r'/data/d1/kgem/checkpoints'
         stopper = 'early'
         stopper_kwargs = None
         # 8. Evaluation
@@ -370,8 +368,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', default='kinships')
     parser.add_argument('--model', default='TransE')
-    parser.add_argument('--output-dir', default=r'\Users\borow\kgem\ergebnisse')
-    # parser.add_argument('--output-dir', default=r'/data/d1/kgem/results2')
+    parser.add_argument('--output-dir', default='logs/kgem')
     parser.add_argument('--epochs', type=int, default=1000)
 
     # randomization and hardware profiling
