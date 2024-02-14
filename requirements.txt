@@ -1,5 +1,4 @@
-codecarbon~=2.3.1
-pykeen~=1.10.1
-numpy~=1.26.1
-pandas~=2.1.2
-torch~=2.1.0
+codecarbon==2.3.1
+pykeen==1.10.1
+numpy==1.26.1
+pandas==2.1.2
