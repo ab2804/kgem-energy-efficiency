@@ -10,7 +10,7 @@ import logging
 from codecarbon import OfflineEmissionsTracker
 # from pykeen.evaluation import RankBasedEvaluator
 
-from mlprops.util import create_output_dir, PatchedJSONEncoder
+from strep.util import create_output_dir, PatchedJSONEncoder
 
 from pykeen import predict
 from pykeen.datasets import get_dataset
